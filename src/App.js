@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState,useEffect } from 'react';
 import axios from 'axios'
-import Article from './components/Article';
+import NewsCards from './components/NewsCards/NewsCards';
+
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
   // const [showSports, setShowSports] = useState(false)
 
   useEffect(()=> {
-    axios.get(`https://newsapi.org/v2/top-headlines?category=business&apiKey=${key}`)
+    axios.get(`https://newsapi.org/v2/top-headlines?language=en&category=business&apiKey=${key}`)
     .then(res => {
       console.log(res)
       setBusinessArticles(res.data.articles)
@@ -27,16 +27,12 @@ function App() {
   },[])
 
   return (
-    <div className="App">
-      <button onClick={() => setShowBusiness(!showBusiness)} >Business</button>
-      {showBusiness && <ul>
-      {
-        businessArticles.map(article => (
-          <li key={article.id}>{article.title}</li>
-        ))
-      }
-      </ul>
+    <div>
+      <button onClick={() => setShowBusiness(!showBusiness)} >Business</button><hr></hr>
+      <div className="container">
+      {showBusiness && <NewsCards articles={businessArticles}/>
       } 
+      </div>
     </div>
   );
 }
