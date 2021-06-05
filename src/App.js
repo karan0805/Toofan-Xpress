@@ -47,7 +47,6 @@ function App() {
       {showEntertainment && <NewsCards cat={"entertainment"}/>
       }
       </div>
-
     </div>
   );
 }

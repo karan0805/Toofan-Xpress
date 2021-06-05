@@ -28,3 +28,4 @@ const NewsCard = (props) => {
 };
 
 export default NewsCard;
+
