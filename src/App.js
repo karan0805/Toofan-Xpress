@@ -1,23 +1,52 @@
 import './App.css';
-import NewsCard from './components/NewsCard/NewsCard'
+import { useState } from 'react';
+import NewsCards from './components/NewsCards/NewsCards';
+
 
 function App() {
 
-const data ={
-"author": "Natasha Lomas",
-"title": "In latest big tech antitrust push, Germany's FCO eyes Google News Showcase fine print",
-"description": "The Bundeskartellamt, Germany’s very active competition authority, isn’t letting the grass grow under new powers it gained this year to tackle big tech: The Federal Cartel Office (FCO) has just announced a third proceeding against Google. The FCO’s latest com…",
-"url": "https://techcrunch.com/2021/06/04/in-latest-big-tech-antitrust-push-germanys-fco-targets-google-news-showcases-fine-print/",
-"urlToImage": "https://techcrunch.com/wp-content/uploads/2015/02/newspapers.jpg?w=600",
-"publishedAt": "2021-06-04T12:03:07Z",
-"content": "The Bundeskartellamt, Germany’s very active competition authority, isn’t letting the grass grow under new powers it gained this year to tackle big tech: The Federal Cartel Office (FCO) has just annou… [+9042 chars]"
-}
+  const [showBusiness, setShowBusiness] = useState(true)
+  const [showSports, setShowSports] = useState(true)
+  const [showTechnology, setShowTechnology] = useState(false)
+  const [showScience, setShowScience] = useState(false)
+  const [showHealth, setShowHealth] = useState(false)
+  const [showEntertainment, setShowEntertainment] = useState(false)
 
   return (
-    <div className="App">
-      <NewsCard content={data}></NewsCard>
-      <NewsCard content={data}></NewsCard>
-      <NewsCard content={data}></NewsCard>
+    <div>
+      <button onClick={() => setShowBusiness(!showBusiness)} >Business</button>
+      <button onClick={() => setShowSports(!showSports)} >Sports</button>
+      <button onClick={() => setShowTechnology(!showTechnology)} >Technology</button>
+      <button onClick={() => setShowScience(!showScience)} >Science</button>
+      <button onClick={() => setShowHealth(!showHealth)} >Health</button>
+      <button onClick={() => setShowEntertainment(!showEntertainment)} >Entertainment</button>
+
+      <hr></hr>
+
+      <div className="container">
+      {showBusiness && <NewsCards cat={"business"}/>
+      }
+      </div>
+      <div className="container">
+      {showSports && <NewsCards cat={"sports"}/>
+      }
+      </div>
+      <div className="container">
+      {showTechnology && <NewsCards cat={"technology"}/>
+      }
+      </div>
+      <div className="container">
+      {showScience && <NewsCards cat={"science"}/>
+      }
+      </div>
+      <div className="container">
+      {showHealth && <NewsCards cat={"health"}/>
+      }
+      </div>
+      <div className="container">
+      {showEntertainment && <NewsCards cat={"entertainment"}/>
+      }
+      </div>
     </div>
   );
 }

@@ -6,12 +6,17 @@ body {
   background-color: #212121;
 }
 
-.App
-{
-margin: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: wrap;
-height: 50%;
+
+/* .App {
+  display: flex;
+  justify-content: ;
+} */
+
+.container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  height: 50%;
 }
