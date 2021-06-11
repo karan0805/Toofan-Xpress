@@ -6,7 +6,7 @@ import './styles.css'
 
 const SearchQuery = ({ match }) => {
 
-  const cat= match.params.query; 
+  const [cat]= useState(match.params.query); 
   const [articles, setArticles] = useState([]);
   const key = "06a6f6c07d1e459ba2eaaaa3598ed490";
 
@@ -26,16 +26,16 @@ const SearchQuery = ({ match }) => {
 
   return (
     <div className="wrapper2">
-      <Zoom>
-        {/* <div style={{ padding: "100px" }}>
+      {/* <div style={{ padding: "100px" }}>
           {console.log(match.params.query)}
           {match.params.query}
         </div> */}
 
-        {articles.map((article) => (
+      {articles.map((article) => (
+        <Zoom>
           <NewsCard content={article} />
-        ))}
-      </Zoom>
+        </Zoom>
+      ))}
     </div>
   );
 };

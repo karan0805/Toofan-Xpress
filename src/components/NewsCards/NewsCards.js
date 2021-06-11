@@ -53,19 +53,21 @@ const NewsCards = ({cat}) => {
         >
           {cat}
         </h1>
-
-        <Carousel
-          swipeable={true}
-          draggable={true}
-          additionalTransfrom={50}
-          responsive={responsive}
-          containerClass="carousel-container"
-        >
-          {articles.map((article) => (
-            <NewsCard content={article} />
-          ))}
-        </Carousel>
       </Zoom>
+
+      <Carousel
+        swipeable={true}
+        draggable={true}
+        additionalTransfrom={50}
+        responsive={responsive}
+        containerClass="carousel-container"
+      >
+        {articles.map((article) => (
+          <Zoom>
+            <NewsCard content={article} />
+          </Zoom>
+        ))}
+      </Carousel>
     </>
   );
 }

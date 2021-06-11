@@ -1,16 +1,15 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
-
+ 
   const [query, setQuery] = useState("");
 
   return (
     <div>
       <nav className="navbar navbar-dark bg-dark fixed-top">
         <span className="navbar-brand mb-0 h1">Toofan-Xpress</span>
-        <li>
+        <li onClick={()=>setQuery('')}>
           <Link style={{ color: "white", textDecoration: "None" }} to="/">
             Home
           </Link>
