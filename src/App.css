@@ -1,22 +1,33 @@
-/* Demo purposes only */
-html {
-  height: 100%;
-}
-body {
-  background-color: #212121;
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
 }
 
+.sidebar{
+background-color:#242B2E;
+display: flex;
+flex-direction: column;
+padding: 10px;
+padding-top: 80px;
+}
 
-/* .App {
-  display: flex;
-  justify-content: ;
-} */
+.main{
+background-color: #242B2E;
+height: 100vh;
+overflow: auto;
+padding-top: 50px;
 
-.container {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  height: 50%;
+}
+
+.mybutton{
+    margin: 10px;
+    background-color: lightblue;
+    border: 2px solid  black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.mycontainer
+{
+    padding: 10px;
 }

@@ -1,0 +1,9 @@
+.wrapper2{
+background-color:#242B2E;
+margin-top: 50px;;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
