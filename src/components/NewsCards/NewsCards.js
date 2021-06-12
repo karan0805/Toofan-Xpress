@@ -1,12 +1,14 @@
-import React,{ useState,useEffect } from 'react'
-import NewsCard from '../NewsCard/NewsCard'
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import NewsCard from "../NewsCard/NewsCard";
+import axios from "axios";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Zoom from "react-reveal/Zoom";
+import { Spinner } from "reactstrap";
 
-const NewsCards = ({cat}) => {
-  const [articles, setArticles] = useState([])
+const NewsCards = ({ cat }) => {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const responsive = {
     superLargeDesktop: {
@@ -28,18 +30,27 @@ const NewsCards = ({cat}) => {
     },
   };
   //API key
-  const key = "06a6f6c07d1e459ba2eaaaa3598ed490"
+  const key = "4a661efa37524973abe7fc64be74807f";
 
-  useEffect(()=> {
-    axios.get(`https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`)
-    .then(res => {
-      console.log(res)
-      setArticles(res.data.articles)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  },[cat])
+  const getArticles = async (cat) => {
+    try {
+      const data = await axios
+        .get(
+          `https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`
+        )
+        .then((res) => {
+          console.log(res);
+          setArticles(res.data.articles);
+        });
+      setLoading(false);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getArticles(cat);
+  }, []);
 
   return (
     <>
@@ -62,14 +73,28 @@ const NewsCards = ({cat}) => {
         responsive={responsive}
         containerClass="carousel-container"
       >
-        {articles.map((article) => (
+        {loading ? (
+          <Zoom>
+            <div style={{ display: "flex" }}>
+              <h4 style={{ color: "white", paddingRight: "10px" }}>Loading </h4>
+              <Spinner color="primary" />
+            </div>
+          </Zoom>
+        ) : (
+          articles.map((article) => (
+            <Zoom>
+              <NewsCard content={article} />
+            </Zoom>
+          ))
+        )}
+        {/* {articles.map((article) => (
           <Zoom>
             <NewsCard content={article} />
           </Zoom>
-        ))}
+        ))} */}
       </Carousel>
     </>
   );
-}
+};
 
-export default NewsCards
+export default NewsCards;
