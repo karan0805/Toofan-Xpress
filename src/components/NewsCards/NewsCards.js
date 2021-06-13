@@ -52,7 +52,7 @@ const NewsCards = ({ cat }) => {
 
   useEffect(() => {
     getArticles(cat);
-  }, []);
+  }, [cat]);
 
   return (
     <>
