@@ -32,9 +32,11 @@ const SearchQuery = ({ match }) => {
         </div> */}
 
       {articles.map((article) => (
+        <div key={article.title}>
         <Zoom>
           <NewsCard content={article} />
         </Zoom>
+        </div>
       ))}
     </div>
   );

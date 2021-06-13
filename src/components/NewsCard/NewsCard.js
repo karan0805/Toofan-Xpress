@@ -20,7 +20,7 @@ const NewsCard = (props) => {
           <p>{props.content.description}</p>
           <button>Read More</button>
         </figcaption>
-        <a href={props.content.url} target="_blank" rel="noreferrer"/>
+        <a href={props.content.url} target="_blank" rel="noreferrer">card</a>
       </figure>
     </div>
   );

@@ -43,9 +43,11 @@ const NewsCards = ({ cat }) => {
           setArticles(res.data.articles);
         });
       setLoading(false);
+      return data;
     } catch (e) {
       console.log(e);
     }
+    
   };
 
   useEffect(() => {
@@ -82,9 +84,11 @@ const NewsCards = ({ cat }) => {
           </Zoom>
         ) : (
           articles.map((article) => (
-            <Zoom>
-              <NewsCard content={article} />
-            </Zoom>
+            <div key={article.title}>
+              <Zoom>
+                <NewsCard content={article} key={article.title} />
+              </Zoom>
+            </div>
           ))
         )}
         {/* {articles.map((article) => (
