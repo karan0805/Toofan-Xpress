@@ -13,7 +13,7 @@ const SearchQuery = ({ match }) => {
   useEffect(() => {
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=${match.params.query}&apiKey=${key}`
+        `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${match.params.query}&apiKey=${key}`
       )
       .then((res) => {
         console.log(res);
