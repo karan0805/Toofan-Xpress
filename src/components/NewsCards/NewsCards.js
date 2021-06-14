@@ -36,7 +36,7 @@ const NewsCards = ({ cat }) => {
     try {
       const data = await axios
         .get(
-          `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`
+          `https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`
         )
         .then((res) => {
           console.log(res);
