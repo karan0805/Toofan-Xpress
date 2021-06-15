@@ -30,14 +30,15 @@ const NewsCards = ({ cat }) => {
     },
   };
   //API key
-  const key = "4a661efa37524973abe7fc64be74807f";
+  // const key = "4a661efa37524973abe7fc64be74807f";
 
   const getArticles = async (cat) => {
     try {
       const data = await axios
-        .get(
-          `https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`
-        )
+        // .get(
+        //   `https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`
+        // )
+        .get(`https://toofan-xpress-backend.herokuapp.com/category?q=${cat}`)
         .then((res) => {
           console.log(res);
           setArticles(res.data.articles);

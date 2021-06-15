@@ -8,12 +8,15 @@ const SearchQuery = ({ match }) => {
 
   // const [cat]= useState(match.params.query); 
   const [articles, setArticles] = useState([]);
-  const key = "06a6f6c07d1e459ba2eaaaa3598ed490";
+  // const key = "06a6f6c07d1e459ba2eaaaa3598ed490";
 
   useEffect(() => {
     axios
+      // .get(
+      //   `https://newsapi.org/v2/everything?q=${match.params.query}&apiKey=${key}`
+      // )
       .get(
-        `https://newsapi.org/v2/everything?q=${match.params.query}&apiKey=${key}`
+        `https://toofan-xpress-backend.herokuapp.com/search?q=${match.params.query}`
       )
       .then((res) => {
         console.log(res);
