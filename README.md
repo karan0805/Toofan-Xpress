@@ -5,7 +5,7 @@
 
 ###  A News Aggregator App in ReactJs with NewsApi.org  . You can browse categories or Search topic you want and the News will be displayed in card form💫✨
 
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=toofan-xpress)
+[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=toofan-xpress)](https://toofan-xpress.vercel.app)
 [
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/karan0805/Toofan-Xpress/issues) [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/karan0805/Toofan-Xpress) 
 
