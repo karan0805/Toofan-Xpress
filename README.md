@@ -16,9 +16,9 @@
 # Website - <em>[ToofanXpress](https://toofan-xpress.vercel.app/)</em>
 
 # Features
-- ***[Browse categories](##Categories-)***
-- ***[Search news on a topic](##Search-)***
-- ***[Much more to be added](##Future-Scope)***
+- ***[Browse categories](#Categories-)***
+- ***[Search news on a topic](#Search-)***
+- ***[Much more to be added](#Future-Scope)***
 
 
 
