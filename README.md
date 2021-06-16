@@ -22,11 +22,11 @@
 
 
 
-### :rocket:Glimpse :dizzy::dizzy:<br><br>![createaroom](https://snipboard.io/Ez0Tce.jpg)
+## :rocket:Glimpse :dizzy::dizzy:<br><br>![createaroom](https://snipboard.io/Ez0Tce.jpg)
 
 
 
-### How to Run Locally
+## How to Run Locally
 Run the below command to clone the repo locally
 ```
 git clone https://github.com/karan0805/Toofan-Xpress.git
