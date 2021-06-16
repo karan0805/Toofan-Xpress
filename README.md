@@ -1,6 +1,6 @@
   
 # ToofanXpress
-![SM](https://snipboard.io/G7WJqI.jpg)
+![ToofanXpress](https://snipboard.io/G7WJqI.jpg)
 
 
 ###  A News Aggregator App in ReactJs with NewsApi.org  . You can browse categories or Search topic you want and the News will be displayed in card form💫✨
