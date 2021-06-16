@@ -12,7 +12,6 @@ const NewsCards = ({ cat }) => {
 
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -29,18 +28,12 @@ const NewsCards = ({ cat }) => {
       items: 1,
     },
   };
-  //API key
-  // const key = "4a661efa37524973abe7fc64be74807f";
 
   const getArticles = async (cat) => {
     try {
       const data = await axios
-        // .get(
-        //   `https://newsapi.org/v2/top-headlines?language=en&category=${cat}&apiKey=${key}`
-        // )
         .get(`https://toofan-xpress-backend.herokuapp.com/category?q=${cat}`)
         .then((res) => {
-          console.log(res);
           setArticles(res.data.articles);
         });
       setLoading(false);
@@ -48,7 +41,6 @@ const NewsCards = ({ cat }) => {
     } catch (e) {
       console.log(e);
     }
-    
   };
 
   useEffect(() => {
@@ -92,11 +84,6 @@ const NewsCards = ({ cat }) => {
             </div>
           ))
         )}
-        {/* {articles.map((article) => (
-          <Zoom>
-            <NewsCard content={article} />
-          </Zoom>
-        ))} */}
       </Carousel>
     </>
   );
