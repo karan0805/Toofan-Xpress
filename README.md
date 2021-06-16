@@ -33,14 +33,15 @@ git clone https://github.com/karan0805/Toofan-Xpress.git
 ``` 
 
 ---
-### To run the application, go to the root directory 
 
- Run the application using below commands
+ To run the application, go to the root directory and run the below commands
 ```
 npm install		//install all react dependencies
 npm start		//runserver
 ```
 #### this will run your application in localhost:3000
+
+---
 
 ## Future-Scope
 - Authentication 
