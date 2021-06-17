@@ -1,6 +1,6 @@
   
 # ToofanXpress
-![ToofanXpress](https://snipboard.io/G7WJqI.jpg)
+<img src="https://snipboard.io/G7WJqI.jpg" width="85%">
 
 
 ###  A News Aggregator App in ReactJs with NewsApi.org  . You can browse categories or Search topic you want and the News will be displayed in card form💫✨
@@ -22,8 +22,7 @@
 
 
 
-## :rocket:Glimpse :dizzy::dizzy:<br><br>![createaroom](https://snipboard.io/Ez0Tce.jpg)
-
+## :rocket:Glimpse :dizzy::dizzy:<br><br><img src="https://snipboard.io/Ez0Tce.jpg" width="80%">
 
 
 ## How to Run Locally
