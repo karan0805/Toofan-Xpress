@@ -9,11 +9,11 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-dark bg-dark fixed-top">
         <span className="navbar-brand mb-0 h1">Toofan-Xpress</span>
-        <li onClick={()=>setQuery('')}>
+        <span onClick={() => setQuery("")}>
           <Link style={{ color: "white", textDecoration: "None" }} to="/">
             Home
           </Link>
-        </li>
+        </span>
 
         <form className="form-inline">
           <input
