@@ -31,11 +31,9 @@ const NewsCards = ({ cat }) => {
 
   const getArticles = async (cat) => {
     try {
-      const data = await axios
-        .get(`https://toofan-xpress-backend.herokuapp.com/category?q=${cat}`)
-        .then((res) => {
-          setArticles(res.data.articles);
-        });
+      const data = await axios.get(`https://toofan-xpress-backend.herokuapp.com/category?q=${cat}`).then((res) => {
+        setArticles(res.data.articles);
+      });
       setLoading(false);
       return data;
     } catch (e) {

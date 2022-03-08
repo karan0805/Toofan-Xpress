@@ -7,15 +7,13 @@ import SearchQuery from "./components/SearchQuery/SearchQuery";
 import Home from "./components/Home/Home";
 
 function App() {
- 
-
   return (
     <div>
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Home}/>       
-          <Route path="/:query" component={SearchQuery}/>
+          <Route exact path="/" component={Home} />
+          <Route path="/:query" component={SearchQuery} />
         </Switch>
       </Router>
     </div>

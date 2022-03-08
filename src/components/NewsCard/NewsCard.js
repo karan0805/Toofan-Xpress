@@ -8,7 +8,14 @@ const NewsCard = (props) => {
   return (
     <div>
       <figure className="mycard">
-        <img src={props.content.urlToImage} alt="image123" />
+        <img
+          src={props.content.urlToImage}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://snipboard.io/G7WJqI.jpg";
+          }}
+          alt="images"
+        />
         <div className="date">
           <span className="day">{props.content.publishedAt.substr(8, 2)}</span>
           <span className="month">{date}</span>
